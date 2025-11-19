@@ -1,3 +1,5 @@
+import Counter from "../components/Counter";
+
 export default async function Page() {
   const response = await fetch(
     "https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json"
@@ -11,6 +13,7 @@ export default async function Page() {
           <li key={item.id}>{item.name}</li>
         ))}
       </ul>
+      <Counter users={data} />
     </div>
   );
 }
